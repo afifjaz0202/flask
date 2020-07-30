@@ -5,9 +5,13 @@ app = Flask(__name__)
 def index():
     return '<img src="https://preview.redd.it/gap5ah93ciy11.jpg?auto=webp&s=a4497d2ac778a9d46c0f254bb55ae4b502a60b99" />'
 
-@app.route("/another")
+@app.route("/surprise")
 def show():
     return '<h1>Penguin Asscheeks</h1>'
+
+@app.route("/user/<username>")
+def user(username):
+    return (f"Hi {username[:]}, you Bitchass Mofo")
 
 if __name__ == '__main__': # Revisit previous challenge if you're uncertain what this does https://code.nextacademy.com/lessons/name-main/424
     app.run()
